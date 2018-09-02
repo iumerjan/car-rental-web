@@ -1,14 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
-
+import { AppRoutingModule } from './app-routing.module';
+import { CarsComponent } from './pages/cars/cars.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,
