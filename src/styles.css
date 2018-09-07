@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+
+ * General styles
+ */
+body,
+html {
+  height: 100%;
+  /* background-repeat: no-repeat; */
+  /* background:url(https://i.ytimg.com/vi/4kfXjatgeEU/maxresdefault.jpg); */
+  font-family: 'Oxygen', sans-serif;
+  background-size: cover;
+}
+
+.main {
+  margin: 50px 15px;
+}
+
+h1.title {
+  font-size: 50px;
+  font-family: 'Passion One', cursive;
+  font-weight: 400;
+}
+
+hr {
+  width: 10%;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 11px;
+  padding-top: 3px;
+}
+
+.form-control {
+  height: auto !important;
+  padding: 8px 12px !important;
+  width: 320px !important;
+}
+
+.input-group {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21) !important;
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21) !important;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21) !important;
+}
+
+.main-center {
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 10px 40px;
+  background: #5bc0de;
+  /* color: #FFF; */
+  text-shadow: none;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);
+}
+
+.add-button {
+  color: white !important;
+  margin-top: 5px;
+}

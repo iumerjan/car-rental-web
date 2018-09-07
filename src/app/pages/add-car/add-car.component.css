@@ -1,0 +1,17 @@
+.field-validation-error {
+  /* white-space: pre-wrap;*/
+  display: table;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+.label-danger {
+  color: #a94442 !important;
+  background-color: #f2dede !important;
+  border-color: #ebccd1 !important;
+}
+
+.btn-success {
+  opacity: 1;
+}

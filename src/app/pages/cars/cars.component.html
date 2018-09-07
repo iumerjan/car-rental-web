@@ -2,12 +2,13 @@
 <br />
 <div class="container">
   <div class="row ">
-    <div class="col-sm-3">
+    <div class="col-sm-3" *ngFor="let car of cars">
       <div class="card ">
-        <img class="card-img-top" src="../assets/car.jpg" alt="Card image">
+
+        <img class="card-img-top" src="./assets/car.jpg" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">Brezza</h4>
-          <p class="card-text">Rate $6 per hour</p>
+          <h4 class="card-title">{{car.brand}}</h4>
+          <p class="card-text text-info"><strong>${{car.rate}} per hour</strong> </p>
           <span>
 
             <a href="#" class="btn btn-warning width-100">Book</a>
@@ -15,11 +16,11 @@
 
           </span>
         </div>
-      </div>
+      </div><br />
 
     </div>
 
-    <div class="col-sm-3">
+    <!-- <div class="col-sm-3">
       <div class="card">
         <img class="card-img-top" src="../assets/car.jpg" alt="Card image">
         <div class="card-body">
@@ -66,6 +67,6 @@
             </span>
           </div>
         </div>
-      </div>
+      </div> -->
   </div>
 </div>

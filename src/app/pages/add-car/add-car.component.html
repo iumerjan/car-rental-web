@@ -1,0 +1,162 @@
+<div class="container">
+  <div class="row main">
+    <div class="main-login main-center">
+      <h5>Add New Car to your account</h5>
+      <form #addCar="ngForm">
+
+        <div class="form-group">
+          <label class="cols-sm-2 control-label">Brand</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+
+              <input type="text" class="form-control" name="brand" required pattern="^\s*[\w]+[\s\w\W]*$" [(ngModel)]="addCarModel.brand"
+                #brand="ngModel" />
+              <div *ngIf="brand.invalid && (brand.dirty || brand.touched)" class="label label-danger field-validation-error">
+
+                <div *ngIf="brand.errors.required">
+                  Brand is required.
+                </div>
+                <div *ngIf="brand.errors.pattern">
+                  Brand is required.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="cols-sm-2 control-label">Car Number</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+
+              <input type="text" class="form-control" name="car_number" required pattern="^\s*[\w]+[\s\w\W]*$"
+                [(ngModel)]="addCarModel.car_number" #carNumber="ngModel" />
+              <div *ngIf="carNumber.invalid && (carNumber.dirty || carNumber.touched)" class="label label-danger field-validation-error">
+
+                <div *ngIf="carNumber.errors.required">
+                  Car Number is required.
+                </div>
+                <div *ngIf="carNumber.errors.pattern">
+                  Car Number is required.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label class="cols-sm-2 control-label">Model</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+
+              <input type="text" class="form-control" name="model" required pattern="^\s*[\w]+[\s\w\W]*$" [(ngModel)]="addCarModel.model"
+                #model="ngModel" />
+              <div *ngIf="model.invalid && (model.dirty || model.touched)" class="label label-danger field-validation-error ">
+
+                <div *ngIf="model.errors.required">
+                  Model is required.
+                </div>
+                <div *ngIf="model.errors.pattern">
+                  Model is required.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="cols-sm-2 control-label">Number of Seats</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+
+              <input type="text" class="form-control" name="number_of_seats" required pattern="[+0-9]*" [(ngModel)]="addCarModel.number_of_seats"
+                #seats="ngModel" />
+              <div *ngIf="seats.invalid && (seats.dirty || seats.touched)" class="label label-danger field-validation-error">
+
+                <div *ngIf="seats.errors.required">
+                  Number of seats is required.
+                </div>
+
+                <div *ngIf="seats.errors.pattern">
+                  Number of seats should be only digits.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="cols-sm-2 control-label">Rate</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+
+              <input type="text" class="form-control" name="rate" required pattern="[+0-9]*" [(ngModel)]="addCarModel.rate"
+                #rate="ngModel" />
+              <div *ngIf="rate.invalid && (rate.dirty || rate.touched)" class="label label-danger field-validation-error">
+
+                <div *ngIf="rate.errors.required">
+                  Rate is required.
+                </div>
+
+                <div *ngIf="rate.errors.pattern">
+                  Rate should be only digits.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm" class="cols-sm-2 control-label">Car Type</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <select class="form-control" required [(ngModel)]="addCarModel.car_type" name="car_type" #carType="ngModel">
+
+                <option value="Mini">Mini</option>
+                <option value="SUV">SUV</option>
+                <option value="Tempo">Tempo</option>
+              </select>
+
+              <div *ngIf="carType.invalid && (carType.dirty || carType.touched)" class="label label-danger field-validation-error">
+
+                <div *ngIf="carType.errors.required">
+                  Car Type is required.
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm" class="cols-sm-2 control-label">Color</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+
+              <input type="text" class="form-control" name="color" required pattern="^\s*[\w]+[\s\w\W]*$" [(ngModel)]="addCarModel.color"
+                #color="ngModel" />
+              <div *ngIf="color.invalid && (color.dirty || color.touched)" class="label label-danger field-validation-error">
+
+                <div *ngIf="color.errors.required">
+                  Color is required.
+                </div>
+
+                <div *ngIf="color.errors.pattern">
+                  Color should be only digits.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group text-center">
+          <button type="button" class="btn btn-success add-button" [disabled]="!addCar.valid">Register Car</button>
+          <button type="button" class="btn btn-danger add-button">Cancel </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
