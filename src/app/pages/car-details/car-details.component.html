@@ -1,0 +1,42 @@
+<div class="container m-t-70">
+  
+  <div class="profile-user-info col-xs-12">
+      <div>
+          <h2 >Car Details</h2>
+        </div>
+    <div class="profile-info-row">
+      <div class="profile-info-name">Brand</div>
+      <div class="profile-info-value">{{carObj.brand}}</div>
+    </div>
+    <div class="profile-info-row">
+      <div class="profile-info-name">Car Number</div>
+      <div class="profile-info-value">{{carObj.car_number}}</div>
+    </div>
+    <div class="profile-info-row">
+      <div class="profile-info-name">Model</div>
+      <div class="profile-info-value">{{carObj.model}}</div>
+    </div>
+    <div class="profile-info-row">
+      <div class="profile-info-name">Number of Seats</div>
+      <div class="profile-info-value">{{carObj.number_of_seats}}</div>
+    </div>
+    <div class="profile-info-row">
+      <div class="profile-info-name">Rate</div>
+      <div class="profile-info-value">$ {{carObj.rate}}</div>
+    </div>
+    <div class="profile-info-row">
+      <div class="profile-info-name">Car Type</div>
+      <div class="profile-info-value">{{carObj.car_type}}</div>
+    </div>
+    <div class="profile-info-row">
+      <div class="profile-info-name">Color</div>
+      <div class="profile-info-value">{{carObj.color}}</div>
+    </div>
+
+
+  </div>
+  <div class="form-group text-center">
+     
+      <button type="button" class="btn btn-primary back-button width-100" [routerLink]="['/cars']">Back </button>
+    </div>
+</div>
