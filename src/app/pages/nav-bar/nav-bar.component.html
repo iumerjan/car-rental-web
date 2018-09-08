@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark ">
+    <ul class="navbar-nav ">
+      
+      <li class="{{(currentUrl == 'add-car')  && 'nav-item active'  || ' ' }}">
+        <a class="nav-link" [routerLink]="['/add-car']">Add New Car</a>
+      </li>
+      <li class="{{(currentUrl == 'cars' || currentUrl == 'car-details' || currentUrl == 'book-car')  && 'nav-item active'  || ' ' }}">
+        <a class="nav-link" [routerLink]="['/cars']">Cars</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" disable>Help</a>
+      </li>
+    </ul>
+  </nav>

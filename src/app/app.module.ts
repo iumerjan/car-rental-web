@@ -10,6 +10,7 @@ import { CarDetailsComponent } from './pages/car-details/car-details.component';
 import { DeleteCarComponent } from './pages/delete-car/delete-car.component';
 import { BookCarComponent } from './pages/book-car/book-car.component';
 import { FormsModule } from '@angular/forms';
+import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     AddCarComponent,
     CarDetailsComponent,
     DeleteCarComponent,
-    BookCarComponent
+    BookCarComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
