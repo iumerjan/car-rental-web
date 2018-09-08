@@ -9,9 +9,9 @@ export class CarsService {
   constructor(private httpClient: HttpClient) { }
 
   // fetch all cars service
-  getCars() {
+  getCars(page: number) {
 
-    return this.httpClient.get(this.baseUrl);
+    return this.httpClient.get(this.baseUrl + page);
   }
 
   // add car service
@@ -27,7 +27,7 @@ export class CarsService {
   // fetch car by ID service
   getCarbyID(id: any) {
 
-    return this.httpClient.get(this.baseUrl + id);
+    return this.httpClient.get(this.baseUrl + 'details/' + id);
   }
 
 }

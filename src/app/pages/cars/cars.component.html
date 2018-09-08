@@ -1,4 +1,6 @@
+<!-- Showing Nav Bar -->
 <app-nav-bar></app-nav-bar>
+
 <div class="container m-t-50">
   <div class="row " *ngIf="isData">
     <div class="col-sm-3" *ngFor="let car of cars">
@@ -20,54 +22,60 @@
     </div>
   </div>
 
-      <div *ngIf="!isData">
-        <table align="center" style="width: 100%" cellpadding="0" cellspacing="0" border="0">
-          <tr>
-            <td align="center" style="width: 90%; vertical-align: middle">
-              <table align="center" style="width: 100%" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <td colspan="2" style="height: 60px"></td>
-                </tr>
-  
-                <tr>
-                  <td style="text-align:  center">
-                    <img src="../assets/failure.jpg" style="border: 0; height: 70%" />
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" style="height: 20px"></td>
-                </tr>
-                <tr>
-                  <td class="TextStyle2" style="text-align: center">
-                    Sorry !
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" style="height: 15px"></td>
-                </tr>
-                <tr>
-                  <td class="TextStyle3" style="text-align: center">
-                   No Car has been found, please click Add New Car to add a car!
-                  </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="height: 25px"></td>
-                  </tr>
-                <tr>
-                  <td style="text-align: center">
-                      <button type="button" class="btn btn-primary add-button " [routerLink]="['/add-car']">Add New Car </button>
-                  </td>
-                </tr>
-               
-                <tr>
-                  <td colspan="2" style="height: 30px"></td>
-                </tr>
-               
-               
-              </table>
-            </td>
-          </tr>
-        </table>
-      </div>
+  <!-- Pagination -->
+  <div class="form-group text-center " *ngIf="isData && currentPage != totalPages">
+    <button class="btn btn-danger" (click)="getCars()">See More...</button>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="!isData">
+    <table align="center" style="width: 100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td align="center" style="width: 90%; vertical-align: middle">
+          <table align="center" style="width: 100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td colspan="2" style="height: 60px"></td>
+            </tr>
+
+            <tr>
+              <td style="text-align:  center">
+                <img src="../assets/failure.jpg" style="border: 0; height: 70%" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="height: 20px"></td>
+            </tr>
+            <tr>
+              <td class="TextStyle2" style="text-align: center">
+                Sorry !
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="height: 15px"></td>
+            </tr>
+            <tr>
+              <td class="TextStyle3" style="text-align: center">
+                No Car has been found, please click Add New Car to add a car!
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="height: 25px"></td>
+            </tr>
+            <tr>
+              <td style="text-align: center">
+                <button type="button" class="btn btn-primary add-button " [routerLink]="['/add-car']">Add New Car
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" style="height: 30px"></td>
+            </tr>
+            
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
 
 </div>
