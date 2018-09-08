@@ -88,6 +88,23 @@ input::-webkit-input-placeholder {
   letter-spacing: 1px;
 }
 
+.TextStyle3 {
+  color: #d9534f;
+  font-family: Calibri, Arial, Tahoma;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.TextStyle2 {
+  font-family: "futuracondensed_medium", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: #ec710d;
+  font-size: 35px;
+  letter-spacing: 1px;
+}
+
 .m-t-70 {
   margin-top: 70px;
 }

@@ -14,14 +14,16 @@ export class CarsComponent implements OnInit {
   ngOnInit() {
     this.getCars();
   }
-  
+
   getCars() {
     this.eCarService.getCars().subscribe(data => {
+        // copy response into local obj.
       this.cars = data;
-    //  this.isData = data.length > 0;
-    
+      // check data is available or not.
+      this.isData = this.cars.length > 0;
+
     }, error => {
-      console.log(error.message)
+      console.log(error);
     });
   }
 
