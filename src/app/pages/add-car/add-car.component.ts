@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarsService } from '../../Services/cars.service';
 
 @Component({
   selector: 'app-add-car',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCarComponent implements OnInit {
   addCarModel: any = {};
-  constructor() { }
+  isProcessing: boolean = false;
+  isCompleted: boolean = false;
+  constructor(private eCarService: CarsService) { }
 
   ngOnInit() {
   }
 
+  registerCar() {
+    this.isProcessing = true;
+    this.eCarService.registerCar(this.addCarModel).subscribe(data => {
+      this.isProcessing = false;
+      this.isCompleted = true;
+    }, error => {
+      this.isProcessing = false;
+      console.log(error.message)
+    });
+  }
+
 }
+

@@ -8,10 +8,22 @@ export class CarsService {
   baseUrl = environment.baseURL + '/api/car/';
   constructor(private httpClient: HttpClient) { }
 
+  // fetch all cars service
   getCars() {
-   
+
     return this.httpClient.get(this.baseUrl);
   }
+
+  // add car servive
+  registerCar(model: any) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.httpClient.post(this.baseUrl, model, httpOptions);
+  }
+
 
   private handleError(error: any) {
 

@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="row main">
-    <div class="main-login main-center">
-      <h5>Add New Car to your account</h5>
-      <form #addCar="ngForm">
+
+  <form #addCar="ngForm" *ngIf="!isCompleted">
+    <div class="row main">
+      <div class="main-login main-center">
+        <h5>Add New Car to your account</h5>
 
         <div class="form-group">
           <label class="cols-sm-2 control-label">Brand</label>
@@ -109,7 +110,7 @@
         </div>
 
         <div class="form-group">
-          <label for="confirm" class="cols-sm-2 control-label">Car Type</label>
+          <label class="cols-sm-2 control-label">Car Type</label>
           <div class="cols-sm-10">
             <div class="input-group">
               <select class="form-control" required [(ngModel)]="addCarModel.car_type" name="car_type" #carType="ngModel">
@@ -131,7 +132,7 @@
         </div>
 
         <div class="form-group">
-          <label for="confirm" class="cols-sm-2 control-label">Color</label>
+          <label  class="cols-sm-2 control-label">Color</label>
           <div class="cols-sm-10">
             <div class="input-group">
 
@@ -152,11 +153,66 @@
         </div>
 
         <div class="form-group text-center">
-          <button type="button" class="btn btn-success add-button" [disabled]="!addCar.valid">Register Car</button>
-          <button type="button" class="btn btn-danger add-button"  [routerLink]="['/cars']">Cancel </button>
+          <button type="button" class="btn btn-success add-button" [disabled]="!addCar.valid || isProcessing" (click)="registerCar()">Register
+            Car</button>
+          <button type="button" class="btn btn-danger add-button" [routerLink]="['/cars']">Cancel </button>
         </div>
+      </div>
+      </div>
 
-      </form>
+  </form>
+
+  <form #completeForm="ngForm" *ngIf="isCompleted">
+
+    <div>
+      <table align="center" style="width: 100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td align="center" style="width: 90%; vertical-align: middle">
+            <table align="center" style="width: 100%" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td colspan="2" style="height: 60px"></td>
+              </tr>
+
+              <tr>
+                <td style="text-align:  center">
+                  <img src="../assets/SuccessImg.png" style="border: 0; height: 70%" />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="height: 20px"></td>
+              </tr>
+              <tr>
+                <td class="TextStyle6" style="text-align: center">
+                  Success !
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="height: 30px"></td>
+              </tr>
+              <tr>
+                <td class="TextStyle5" style="text-align: center">
+                  Car has been added successfully!
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2" style="height: 30px"></td>
+              </tr>
+              <tr>
+                <td style="text-align: center">
+                  <button type="button" class="btn btn-primary" routerLink="/cars">
+                    Close
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="height: 30px"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
     </div>
-  </div>
+  </form>
+
 </div>

@@ -70,3 +70,20 @@ input::-webkit-input-placeholder {
   color: white !important;
   margin-top: 5px;
 }
+
+.TextStyle5 {
+  color: #00ba4d;
+  font-family: Calibri, Arial, Tahoma;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.TextStyle6 {
+  font-family: "futuracondensed_medium", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: #006bd8;
+  font-size: 35px;
+  letter-spacing: 1px;
+}
