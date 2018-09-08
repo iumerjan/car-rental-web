@@ -14,7 +14,7 @@ export class CarsService {
     return this.httpClient.get(this.baseUrl);
   }
 
-  // add car servive
+  // add car service
   registerCar(model: any) {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -24,28 +24,10 @@ export class CarsService {
     return this.httpClient.post(this.baseUrl, model, httpOptions);
   }
 
+  // fetch car by ID service
+  getCarbyID(id: any) {
 
-  private handleError(error: any) {
-
-    const applicationError = error.headers.get('Application-Error');
-    if (applicationError) {
-      return Observable.throw(applicationError);
-    }
-    let modelStateErrors = '';
-    try {
-      const serverError = error.json();
-      if (serverError) {
-
-        modelStateErrors = serverError;
-      }
-
-    } catch (e) {
-      modelStateErrors = 'Sorry, something went wrong.';
-    }
-
-    return Observable.throw(
-      modelStateErrors || 'Server error'
-    );
-
+    return this.httpClient.get(this.baseUrl + id);
   }
+
 }

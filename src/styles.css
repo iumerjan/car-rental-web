@@ -87,3 +87,21 @@ input::-webkit-input-placeholder {
   font-size: 35px;
   letter-spacing: 1px;
 }
+
+.m-t-70 {
+  margin-top: 70px;
+}
+
+.m-t-50 {
+  margin-top: 50px;
+}
+
+.back-button {
+  color: white !important;
+  margin-top: 15px;
+  margin-left: -192px;
+}
+
+.width-100 {
+  width: 100px;
+}
